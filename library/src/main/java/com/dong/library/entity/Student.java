@@ -1,0 +1,27 @@
+package com.dong.library.entity;
+
+import lombok.Data;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+@Data
+public class Student {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String name;
+    private String pwd;
+    private String card;
+    private String tel;
+    private Integer brrCount;
+    private Integer timeOut;
+
+    @Override
+    public String toString() {
+        return id.toString();
+    }
+}
